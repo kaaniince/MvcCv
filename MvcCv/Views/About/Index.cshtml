@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using MvcCv.Models.Entity;
+@model List<TblAbout>
+
+
+<br />
+<h2>Page Of Update About</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Name </label>
+        <input type="text" name="Name" value="@item.Name" class="form-control" />
+        <br />
+        <label>Surname </label>
+        <input type="text" name="Surname" value="@item.Surname" class="form-control" />
+
+        <label>PhoneNumber </label>
+        <input type="text" name="PhoneNumber" value="@item.PhoneNumber" class="form-control" />
+
+        <label>Mail </label>
+        <input type="text" name="Mail" value="@item.Mail" class="form-control" />
+
+        <label>Image </label>
+        <input type="text" name="Image" value="@item.Image" class="form-control" />
+
+        <label>Description</label>
+        <textarea rows="5" class="form-control" name="Description">@item.Description</textarea>
+
+
+    }
+    <br />
+    <button class="btn btn-success">Update</button>
+</form>

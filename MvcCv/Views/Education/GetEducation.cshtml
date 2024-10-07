@@ -1,0 +1,37 @@
+﻿
+@model MvcCv.Models.Entity.TblEducation
+
+@{
+    ViewBag.Title = "GetEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Update of This Education</h4>
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.Label("Header")
+    @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Header, "", new { style = "color: red;" })
+    <br />
+    @Html.Label("Subtitle1")
+    @Html.TextBoxFor(x => x.SubTitle1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Subtitle2")
+    @Html.TextBoxFor(x => x.SubTitle2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br 
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GNO, "", new { style = "color: blue;" })
+
+    <br />
+
+
+    <button class="btn btn-info">Add</button>
+</form>
+

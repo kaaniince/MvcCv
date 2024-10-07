@@ -1,0 +1,25 @@
+﻿
+@model MvcCv.Models.Entity.TblSkill
+
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Page Of Update Skill</h4>
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.Label("Skill")
+    @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
+    <br />
+    @Html.Label("Rate")
+    @Html.TextBoxFor(x => x.Rate, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-success">Update</button>
+</form>
