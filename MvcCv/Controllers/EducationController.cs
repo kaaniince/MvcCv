@@ -8,10 +8,13 @@ using System.Web.Mvc;
 
 namespace MvcCv.Controllers
 {
+
     public class EducationController : Controller
     {
         EducationRepository repo = new EducationRepository();
         // GET: Education
+
+        [Authorize]
         public ActionResult Index()
         {
             var education = repo.List();
